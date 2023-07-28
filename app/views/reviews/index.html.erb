@@ -1,0 +1,9 @@
+<h1>👀 Reviews for <%= @restaurant.name %></h1>
+
+<ul>
+  <% @reviews.each do |review| %>
+    <li><%= "⭐️" * review.rating %><%= review.content %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "⏎ Back to restaurant page", restaurant_path(@restaurant) %></p>
